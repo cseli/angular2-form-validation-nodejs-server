@@ -1,0 +1,19 @@
+{
+  "name": "serverspaform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jasmine-node spec/api/ --junitreport"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "frisby": "^0.8.5"
+  }
+}

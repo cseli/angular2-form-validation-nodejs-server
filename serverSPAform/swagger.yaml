@@ -1,0 +1,47 @@
+swagger: '2.0'
+
+info:
+  version: "1.0.0"
+  title: SPA form server
+  description: The Spa form server receive user data.
+
+basePath: /v1
+consumes:
+  - application/json
+schemes:
+  - http
+
+paths:
+  /spaform:
+    post:
+      description: Querie user data.
+      parameters:
+        - name: spa form
+          in: body
+          description: The pet JSON you want to post
+          schema:
+            $ref: '#/definitions/SPAform'
+          required: true
+      responses:
+        200:
+          description: Get datas from DB successfully.
+        400:
+          description: Not a valid json in the body.
+  /:
+    get:
+      description: Healthcheck endpoint.
+      responses:
+        200:
+          description: Get datas from DB successfully.
+
+definitions:
+  SPAform:
+    properties:
+        name:
+          type: string
+        email:
+          type: string
+        birthday:
+          type: string
+        occupation:
+          type: string
